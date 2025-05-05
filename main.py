@@ -5,6 +5,8 @@ from kivy.uix.boxlayout import BoxLayout
 class HomeInterface(BoxLayout):
     pass
 
+class LoginPage(BoxLayout):
+    pass
 
 class MainApp(App):
     pass
