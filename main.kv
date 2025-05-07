@@ -170,3 +170,23 @@ SignupPage:
         text: "Creer un nouveau compte"
         font_size: extra
         font_name: acme
+        size_hint: 1, 0.1
+    FloatLayout:
+        orientation: "horizontal"
+        Image:
+            source: "images/docteur_2.png"
+            size_hint: 0.5, 1
+        FloatLayout:
+            orientation: "vertical"
+            BoxLayout:
+                orientation: "horizontal"
+                Label:
+                    text: "Pseudo"
+                    color: 0, 0, 0
+                    font_size: medium
+                    font_name: amble_italic
+                    size_hint: 1, 0.07
+                TextInput:
+                    multiline: False
+                    write_tab: False
+                    size_hint: 1, 0.07
