@@ -8,7 +8,7 @@
 #: set acme "fonts/acme.ttf"
 #: set amble_regular "fonts/amble/Regular.ttf"
 #: set amble_italic "fonts/amble/Italic.ttf"
-LoginPage:
+SignupPage:
 
 
 <HomeInterface>:
@@ -151,3 +151,22 @@ LoginPage:
                     size_hint: 0.9, 0.3
                     pos_hint: {"center_x": 0.5}
                     background_normal: "images/button_background.png"
+
+<SignupPage>:
+    orientation: "vertical"
+    canvas.before:
+        Color:
+            rgb: hex(bleu)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Label:
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 0.75
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        text: "Creer un nouveau compte"
+        font_size: extra
+        font_name: acme

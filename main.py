@@ -8,6 +8,9 @@ class HomeInterface(BoxLayout):
 class LoginPage(BoxLayout):
     pass
 
+class SignupPage(BoxLayout):
+    pass
+
 class MainApp(App):
     pass
 
