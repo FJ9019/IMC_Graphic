@@ -108,27 +108,45 @@ LoginPage:
             BoxLayout:
                 orientation: "vertical"
                 pos_hint: {"center_x":0.5, "center_y":0.5}
-                spacing: dp(40)
-                padding: dp(15), dp(55)
+                spacing: dp(15)
+                padding: dp(10), dp(50)
                 BoxLayout:
                     orientation: "vertical"
+                    spacing: dp(10)
                     BoxLayout:
                         orientation: "horizontal"
                         Label:
                             text: "Pseudo"
+                            color: 0, 0, 0
+                            font_size: medium
+                            font_name: acme
+                            text_size: self.size
+                            halign: "left"
+                            valign: "middle"
                         TextInput: 
                             multiline: False
                     BoxLayout:
                         orientation: "horizontal"
                         Label:
                             text: "Mot de passe"
+                            color: 0, 0, 0
+                            font_size: medium
+                            font_name: acme
+                            text_size: self.size
+                            halign: "left"
+                            valign: "middle"
                         TextInput: 
                             multiline: False
                 Button:
+                    canvas.before:
+                        Color:
+                            rgb: 1, 0, 0
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
                     text: "Connexion"
                     font_size: medium
                     font_name: amble_italic
                     size_hint: 0.9, 0.3
                     pos_hint: {"center_x": 0.5}
                     background_normal: "images/button_background.png"
-                    background_down: "images/button_background.png"
