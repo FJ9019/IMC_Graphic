@@ -1,13 +1,14 @@
 
 #: import hex kivy.utils.get_color_from_hex
 #: set bleu "#46ADF8"
-# set blanc "f1f1f1"
+#: set blanc "#f1f1f1"
 #: set small dp(12)
 #: set medium dp(24)
 #: set extra dp(36)
 #: set acme "fonts/acme.ttf"
 #: set amble_regular "fonts/amble/Regular.ttf"
 #: set amble_italic "fonts/amble/Italic.ttf"
+#: set radius_ dp(20)
 SignupPage:
 
 
@@ -176,17 +177,33 @@ SignupPage:
         Image:
             source: "images/docteur_2.png"
             size_hint: 0.5, 1
+            pos_hint: {"center_y": 0.53}
         FloatLayout:
-            orientation: "vertical"
+            orientation: "vertical" 
+            canvas.before:
+                Color:
+                    rgb: hex(blanc)
+                RoundedRectangle:
+                    pos: self.pos
+                    size: self.size
+                    radius: radius_, radius_
+            size_hint: 0.9, 0.9
+            pos_hint: {"center_x": 0.5, "center_y": 0.47}
             BoxLayout:
                 orientation: "horizontal"
+                size_hint: 1, 0.07
+                pos_hint: {"center_x": 0.5, "top": 0.95}
+                canvas.before:
+                    Color:
+                        rgb: 1, 0, 0
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size     
                 Label:
                     text: "Pseudo"
                     color: 0, 0, 0
                     font_size: medium
                     font_name: amble_italic
-                    size_hint: 1, 0.07
                 TextInput:
                     multiline: False
                     write_tab: False
-                    size_hint: 1, 0.07
