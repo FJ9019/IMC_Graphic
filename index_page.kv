@@ -1,0 +1,19 @@
+
+<IndexPage>:
+    orientation: "vertical"
+    canvas.before:
+        Color:
+            rgb: hex(bleu)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Label:
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 0.5
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        text: "Bienvenue Mr"
+        font_name: acme
+        font_size: extra
