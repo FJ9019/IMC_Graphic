@@ -7,6 +7,7 @@
         Rectangle:
             pos: self.pos
             size: self.size
+
     Label:
         canvas.before:
             Color:
@@ -14,6 +15,24 @@
             Rectangle:
                 size: self.size
                 pos: self.pos
-        text: "Bienvenue Mr"
+        text: "Bienvenue Mrs"
         font_name: acme
         font_size: extra
+        size_hint: 1, 0.1
+
+    FloatLayout:
+        Image:
+            source: "images/linda.png"
+            size_hint: 0.5, 1
+        Label:
+            text: "Je suis le docteur Régine Joseph"
+            font_name: acme
+            font_size: medium
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        BoxLayout:
+            canvas.before:
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: radius_, radius_
+            orientation: "vertical"
