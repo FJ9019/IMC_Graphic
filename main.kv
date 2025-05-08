@@ -191,7 +191,9 @@ SignupPage:
             pos_hint: {"center_x": 0.5, "center_y": 0.47}
             BoxLayout:
                 orientation: "vertical"
-                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                pos_hint: {"center_x": 0.5, "center_y": 0.6}
+                spacing: dp(50)
+                padding: dp(15), dp(70)
                 BoxLayout:
                     orientation: "horizontal"
                     size_hint: 0.5, 0.07
@@ -241,3 +243,20 @@ SignupPage:
                     TextInput:
                         multiline: False
                         write_tab: False
+                BoxLayout:
+                    orientation: "horizontal"
+                    size_hint: 1, 0.07
+                    spacing: dp(10)
+                    TextInput:
+                        multiline: False
+                        write_tab: False
+                    TextInput:
+                        multiline: False
+                        write_tab: False
+            Button:
+                text: "Creer un compte"
+                background_normal: "images/button_background.png"
+                size_hint: 0.4, 0.09
+                pos_hint: {"right": 0.98, "y": 0.04}
+                font_size: medium
+                font_name: acme
