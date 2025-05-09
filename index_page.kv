@@ -24,11 +24,18 @@
         Image:
             source: "images/linda.png"
             size_hint: 0.5, 1
+
         Label:
-            text: "Je suis le docteur Régine Joseph"
+            text: "Je suis le docteur Linda Martins"
             font_name: acme
             font_size: medium
-            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            pos_hint: {"center_x": 0.48, "center_y": 0.75}
+            text_size: self.size
+            size_hint: None, None
+            size: dp(275), dp(75)
+            valign: "middle"
+            halign: "center"
+
         BoxLayout:
             canvas.before:
                 RoundedRectangle:
@@ -36,3 +43,22 @@
                     pos: self.pos
                     radius: radius_, radius_
             orientation: "vertical"
+            size_hint: 0.35, 0.6
+            pos_hint: {"right": 0.99, "center_y": 0.47}
+            padding: dp(15), dp(25)
+            spacing: dp(30)
+            Button:
+                text: "Modifier mes Infos"
+                font_size: medium
+                font_name: amble_italic
+                background_normal: "images/button_background.png"
+            Button:
+                text: "Consulté mon IMC"
+                font_size: medium
+                font_name: amble_italic
+                background_normal: "images/button_background.png"
+            Button:
+                text: "Etat de santé"
+                font_size: medium
+                font_name: amble_italic
+                background_normal: "images/button_background.png"
