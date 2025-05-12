@@ -47,7 +47,7 @@
                     size_hint: 0.9, 0.3
                     pos_hint: {"center_x": 0.5}
                     background_normal: "images/button_background.png"
-                    background_down: "images/button_background.png"
+                    on_press: app.manage.transition.direction="left";app.manage.current="login"
                 Button:
                     text: "Inscription"
                     font_size: medium
@@ -55,4 +55,4 @@
                     size_hint: 0.9, 0.3
                     pos_hint: {"center_x": 0.5}
                     background_normal: "images/button_background.png"
-                    background_down: "images/button_background.png"
+                    on_press: app.manage.transition.direction="left";app.manage.current="signup"
