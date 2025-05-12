@@ -1,2 +1,24 @@
 
 <StatusPage>:
+    orientation: "vertical"
+    canvas.before:
+        Color:
+            rgb: hex(bleu)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Label:
+        canvas.before:
+            Color: 
+                rgba: 0, 0, 0, 0.5
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        text: "Etat de Santé"
+        font_size: extra
+        font_name: acme
+        size_hint: 1, 0.1
+    FloatLayout:
+        Image:
+            source: "images/linda.png"
+            size_hint: 0.5, 1
