@@ -20,7 +20,25 @@
 #:import status status
 
 
-StatusPage:
+# StatusPage:
+MyScreenManager:
+
+<MyScreenManager@ScreenManager>:
+    Screen:
+        name: "index"
+        Button:
+            text: "A"
+            on_press:root.transition.direction= "left";root.current= "ecranB"
+    Screen:
+        name: "ecranB"
+        Button:
+            text: "B"
+            on_press:root.transition.direction= "left";root.current= "ecranC"
+    Screen:
+        name: "ecranC"
+        Button:
+            text: "C"
+            on_press:root.transition.direction= "right";root.current= "index"
 
 
 
