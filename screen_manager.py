@@ -18,9 +18,10 @@ class MyScreenManager(ScreenManager):
     def check_signup(self, pseudo, password:str, password_repeat, nom_prenom, age, sex, taille, poids, travail):
 
         if password != "" and password == password_repeat:
-            user = User(pseudo, password, nom_prenom, int(age), self.get_gender(sex), int(taille), int(poids), travail)
+            user = User(pseudo, password, nom_prenom, int(age), self.get_gender(sex), int(taille)/100, int(poids), travail)
             data = Data(user)
             data.update()
             print("Inscription réussie")
+            self.current = "index"
         pass
     pass
