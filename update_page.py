@@ -11,7 +11,7 @@ Builder.load_file("update_page.kv")
 class UpdatePage(BoxLayout):
     pseudo = StringProperty()
     nom_prenom = StringProperty()
-    age = NumericProperty()
+    age = StringProperty()
     sex = StringProperty()
     travail = StringProperty()
     taille = StringProperty()
@@ -26,11 +26,11 @@ class UpdatePage(BoxLayout):
             self.pseudo = data['pseudo']
             self.nom_prenom = data['nom_prenom']
             self.age = str(data['age'])
-            self.taille = str(data['taille'])
+            self.taille = str(data['taille']*100)
             self.poids = str(data['poids'])
             self.travail = data['travail']
             self.sex = "Hommes" if data['sex'] ==0 else "Femmes"
-            
+
             print(session)
         pass
     pass
