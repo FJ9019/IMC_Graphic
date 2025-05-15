@@ -1,1 +1,1 @@
-{"status": true, "data": {"mot_de_passe": "secret", "pseudo": "alexa", "nom_prenom": "Alexa Delafontaine", "age": 33, "sex": 1, "taille": 1.76, "poids": 68.0, "travail": "Actrice"}}
+{"status": true, "data": {"mot_de_passe": "surface123", "pseudo": "Doumy", "nom_prenom": "Jerry Fenelus", "age": 34, "sex": 0, "taille": 1.98, "poids": 70, "travail": "Programmeur"}, "msg": "Connexion Reussi"}

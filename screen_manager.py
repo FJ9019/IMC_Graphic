@@ -1,6 +1,8 @@
 from kivy.uix.screenmanager import ScreenManager
 from package.Data import Data
 from package.User import User
+from package.session import Session
+
 
 class MyScreenManager(ScreenManager):
     def get_gender(self, sex):
@@ -15,6 +17,8 @@ class MyScreenManager(ScreenManager):
         print(get_user)
         if get_user['status']:
             self.current = "index"
+            Session.make_session(get_user)
+
     def check_signup(self, pseudo, password:str, password_repeat, nom_prenom, age, sex, taille, poids, travail):
 
         if password != "" and password == password_repeat:
@@ -23,5 +27,11 @@ class MyScreenManager(ScreenManager):
             data.update()
             print("Inscription réussie")
             self.current = "index"
+            get_user = Data.get_user(pseudo, password)
+            Session.make_session(get_user)
+        pass
+
+    def update_data(self):
+        self.current = "update"
         pass
     pass
