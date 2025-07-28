@@ -18,6 +18,8 @@ class MyScreenManager(ScreenManager):
         if get_user['status']:
             self.current = "index"
             Session.make_session(get_user)
+            return
+        Session.clear_session()
 
     def check_signup(self, pseudo, password:str, password_repeat, nom_prenom, age, sex, taille, poids, travail):
 
@@ -47,5 +49,6 @@ class MyScreenManager(ScreenManager):
         data = Data(user)
         data.update()
         print("Mise à jour réussie")
+        self.current = "index"
         pass
     pass

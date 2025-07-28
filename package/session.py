@@ -15,7 +15,7 @@ class Session():
 
     @classmethod
     def clear_session(self):
-        data = {"status": False, "data": {"mot_de_passe": "", "pseudo": "", "nom_prenom": "", "age": None, "sex": None, "taille": None, "poids": None, "travail": ""}}
+        data = {"status": False, "data": {"mot_de_passe": "", "pseudo": "", "nom_prenom": "", "age": None, "sex": None, "taille": None, "poids": None, "travail": ""}, "sante":{'imc':None, 'class sante':None}}
         with open('./Data/session.json', 'w') as file:
             json.dump(data, file)
     pass
