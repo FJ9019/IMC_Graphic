@@ -31,7 +31,21 @@ class MyScreenManager(ScreenManager):
             Session.make_session(get_user)
         pass
 
-    def update_data(self):
-        self.current = "update"
+
+    def check_update(self, pseudo, password:str, password_repeat, nom_prenom, age, sex, taille, poids, travail):
+        old_password = Session.get_session()['data']["mot_de_passe"]
+
+        if password == "" and password_repeat == "": password = old_password
+
+        elif password == password_repeat and password !="":
+            password = password_repeat
+        else:
+            print("Les deux champs du mot de passe doit correspondre")
+            return
+
+        user = User(pseudo, password, nom_prenom, int(age), self.get_gender(sex), float(taille)/100, float(poids), travail)
+        data = Data(user)
+        data.update()
+        print("Mise à jour réussie")
         pass
     pass

@@ -94,7 +94,6 @@
                     Spinner:
                         id: sex
                         text: root.sex
-                        text: "Sex"
                         font_name: amble_regular
                         font_size: dp(18)
                         text_size: self.size
@@ -122,7 +121,7 @@
                     TextInput:
                         id: taille
                         text: root.taille
-                        hint_text: "Taille"
+                        hint_text: "Taille(cm)"
                         font_name: amble_regular
                         font_size: dp(18)
                         text_size: self.size
@@ -174,3 +173,4 @@
                 pos_hint: {"right": 0.98, "y": 0.04}
                 font_size: medium
                 font_name: acme
+                on_press : app.manage.check_update(pseudo.text, password.text, password_repeat.text, nom_prenom.text, age.text, sex.text, taille.text, poids.text, travail.text)

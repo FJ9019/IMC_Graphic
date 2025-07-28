@@ -29,8 +29,8 @@ class UpdatePage(BoxLayout):
             self.taille = str(data['taille']*100)
             self.poids = str(data['poids'])
             self.travail = data['travail']
-            self.sex = "Hommes" if data['sex'] ==0 else "Femmes"
+            self.sex = "Homme" if data['sex'] ==0 else "Femme"
 
-            print(session)
+            print(data)
         pass
     pass
