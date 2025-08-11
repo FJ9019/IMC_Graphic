@@ -46,6 +46,8 @@
             id: imc
     Screen:
         name: "status"
+        on_pre_enter: status.preload_data()
         StatusPage:
+            id: status
 
 

@@ -1,1 +1,1 @@
-{"status": true, "data": {"mot_de_passe": "surface123", "pseudo": "Doumy", "nom_prenom": "Jerry Fenelus", "age": 35, "sex": 0, "taille": 1.98, "poids": 76.0, "travail": "Programmeur"}, "msg": "Connexion Reussi", "sante": {"imc": 19.39, "class sante": 0}}
+{"status": true, "data": {"mot_de_passe": "surface123", "pseudo": "Doumy", "nom_prenom": "Jerry Fenelus", "age": 35, "sex": 0, "taille": 1.98, "poids": 76.0, "travail": "Programmeur"}, "msg": "Connexion Reussi", "sante": {"imc": 19.39, "class_sante": 0}}
