@@ -47,13 +47,14 @@ class Data:
         return self.datas['imc']
     
     
-    def update(self):
+    def update(self, create: bool):
         db = TinyDB("./Data/datas.json")
         user = Query()
         if(len(db.search(user.user_data.pseudo == self.data['pseudo']))==0):
             db.insert(self.datas)
             return
-        db.update(self.datas, user.user_data.pseudo==self.data['pseudo'])
+        if not create:
+            db.update(self.datas, user.user_data.pseudo==self.data['pseudo'])
         
     @classmethod
     def get_user(cls, pseudo, mdp):

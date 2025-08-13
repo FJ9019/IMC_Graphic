@@ -13,7 +13,7 @@ class MyScreenManager(ScreenManager):
         
     def check_credentials(self, pseudo:str, password:str):
         print(f"{pseudo} : {password}")
-        get_user = Data.get_user(pseudo, password)
+        get_user = Data.get_user(pseudo.lower(), password)
         print(get_user)
         if get_user['status']:
             self.current = "index"
@@ -24,7 +24,7 @@ class MyScreenManager(ScreenManager):
     def check_signup(self, pseudo, password:str, password_repeat, nom_prenom, age, sex, taille, poids, travail):
 
         if password != "" and password == password_repeat:
-            user = User(pseudo, password, nom_prenom, int(age), self.get_gender(sex), int(taille)/100, int(poids), travail)
+            user = User(pseudo.lower(), password, nom_prenom, int(age), self.get_gender(sex), int(taille)/100, int(poids), travail)
             data = Data(user)
             data.update()
             print("Inscription réussie")
@@ -34,7 +34,7 @@ class MyScreenManager(ScreenManager):
         pass
 
 
-    def check_update(self, pseudo, password:str, password_repeat, nom_prenom, age, sex, taille, poids, travail):
+    def check_update(self, pseudo:str, password:str, password_repeat, nom_prenom, age, sex, taille, poids, travail):
         old_password = Session.get_session()['data']["mot_de_passe"]
 
         if password == "" and password_repeat == "": password = old_password
@@ -45,7 +45,7 @@ class MyScreenManager(ScreenManager):
             print("Les deux champs du mot de passe doit correspondre")
             return
 
-        user = User(pseudo, password, nom_prenom, int(age), self.get_gender(sex), float(taille)/100, float(poids), travail)
+        user = User(pseudo.lower(), password, nom_prenom, int(age), self.get_gender(sex), float(taille)/100, float(poids), travail)
         data = Data(user)
         data.update()
         print("Mise à jour réussie")

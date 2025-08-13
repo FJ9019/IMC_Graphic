@@ -23,7 +23,7 @@ class UpdatePage(BoxLayout):
         session = Session.get_session()
         if session['status']:
             data = session['data']
-            self.pseudo = data['pseudo']
+            self.pseudo = data['pseudo'].title()
             self.nom_prenom = data['nom_prenom']
             self.age = str(data['age'])
             self.taille = str(data['taille']*100)
